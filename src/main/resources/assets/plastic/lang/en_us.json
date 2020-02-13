@@ -1,5 +1,7 @@
 {
   "block.plastic.plastic_ore": "Plastic Ore",
   "item.plastic.plastic": "Plastic",
-  "item.plastic.plastic_dust": "Plastic Dust"
+  "item.plastic.plastic_dust": "Plastic Dust",
+  "item.plastic.plastic_mix": "Apple-Plastic Mix",
+  "item.plastic.apple_plastic": "Apple-Plastic Stew"
 }

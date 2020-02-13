@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "plastic:plastic_mix"
+    },
+    "result": "plastic:apple_plastic",
+    "experience": 1.0,
+    "cookingtime": 500
+}
