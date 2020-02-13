@@ -16,6 +16,8 @@ public class testMod implements ModInitializer {
 
 	public static final Item plastic = new Item(new Item.Settings().group(ItemGroup.MISC));
 	public static final Block plastic_ore = new FuckBlock(FabricBlockSettings.of(Material.STONE).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).hardness(2).resistance(0.2F).build());
+	public static final Item plastic_dust = new Item(new Item.Settings().group(ItemGroup.MISC));
+
 	@Override
 	public void onInitialize() {
 
@@ -27,6 +29,7 @@ public class testMod implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("testmod", "plastic_ore"), plastic_ore);
 		Registry.register(Registry.ITEM, new Identifier("testmod", "plastic_ore"), new BlockItem(plastic_ore, new Item.Settings().group(ItemGroup.MISC)));
 		Registry.register(Registry.ITEM, new Identifier("testmod", "plastic"), plastic);
+		Registry.register(Registry.ITEM, new Identifier("testmod", "plastic_dust"), plastic_dust);
 	}
 
 }

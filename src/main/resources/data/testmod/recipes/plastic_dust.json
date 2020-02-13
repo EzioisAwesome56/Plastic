@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "testmod:plastic"
+    },
+    "result": "testmod:plastic_dust",
+    "count": 3
+}

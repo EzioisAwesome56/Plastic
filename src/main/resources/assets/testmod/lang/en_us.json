@@ -1,4 +1,5 @@
 {
   "block.testmod.plastic_ore": "Plastic Ore",
-  "item.testmod.plastic": "Plastic"
+  "item.testmod.plastic": "Plastic",
+  "item.testmod.plastic_dust": "Plastic Dust"
 }
