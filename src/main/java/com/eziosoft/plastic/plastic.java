@@ -11,7 +11,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class testMod implements ModInitializer {
+public class plastic implements ModInitializer {
 
 
 	public static final Item plastic = new Item(new Item.Settings().group(ItemGroup.MISC));
