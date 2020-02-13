@@ -1,7 +1,7 @@
 {
-    "type": "minecraft:blasting",
+    "type": "minecraft:smelting",
     "ingredient": {
-        "item": "plastic:raw_plastic"
+        "item": "plastic:plastic_ore"
     },
     "result": "plastic:plastic",
     "experience": 0.1,

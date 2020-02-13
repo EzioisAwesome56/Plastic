@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#i#",
+        "SgS",
+        "#i#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stone"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:slime_ball"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "item": "plastic:raw_plastic",
+        "count": 1
+    }
+}
