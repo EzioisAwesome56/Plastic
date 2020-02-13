@@ -27,8 +27,6 @@ import net.minecraft.world.gen.chunk.OverworldChunkGeneratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.*;
-import sun.jvm.hotspot.gc.shared.Generation;
-import sun.security.krb5.Config;
 
 public class plastic implements ModInitializer {
 
