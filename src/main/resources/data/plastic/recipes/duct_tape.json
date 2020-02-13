@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#LS",
+        "LSL",
+        "SL#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:paper"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "S": {
+            "item": "minecraft:slime_ball"
+        }
+    },
+    "result": {
+        "item": "plastic:duct_tape",
+        "count": 16
+    }
+}

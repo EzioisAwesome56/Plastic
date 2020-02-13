@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        " L ",
+        " / "
+    ],
+    "key": {
+        "#": {
+            "item": "plastic:plastic"
+        },
+        "L": {
+            "item": "plastic:duct_tape"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "plastic:plastic_pick",
+        "count": 1
+    }
+}
