@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "testmod:plastic_ore"
+          "name": "plastic:plastic_ore"
         }
       ],
       "conditions": [

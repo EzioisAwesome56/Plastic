@@ -1,2 +1,2 @@
-# TESTMOD
-I have absolutely no idea what this will be lol
+# Plastic mod
+This mod adds plastic and plastic-by products to minecraft

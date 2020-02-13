@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "testmod:block/plastic_ore"
+    "all": "plastic:block/plastic_ore"
   }
 }
 
