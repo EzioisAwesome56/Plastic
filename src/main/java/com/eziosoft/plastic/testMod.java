@@ -1,4 +1,4 @@
-package com.eziosoft.testmod;
+package com.eziosoft.plastic;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -26,10 +26,10 @@ public class testMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		System.out.println("Loading blocks");
-		Registry.register(Registry.BLOCK, new Identifier("testmod", "plastic_ore"), plastic_ore);
-		Registry.register(Registry.ITEM, new Identifier("testmod", "plastic_ore"), new BlockItem(plastic_ore, new Item.Settings().group(ItemGroup.MISC)));
-		Registry.register(Registry.ITEM, new Identifier("testmod", "plastic"), plastic);
-		Registry.register(Registry.ITEM, new Identifier("testmod", "plastic_dust"), plastic_dust);
+		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_ore"), plastic_ore);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_ore"), new BlockItem(plastic_ore, new Item.Settings().group(ItemGroup.MISC)));
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic"), plastic);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_dust"), plastic_dust);
 	}
 
 }

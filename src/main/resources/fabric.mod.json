@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "testmod",
+  "id": "plastic",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Plastic",
+  "description": "Adds plastic and plastic by-products to minecraft",
   "authors": [
-    "Me!"
+    "EzioisAwesome56"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",

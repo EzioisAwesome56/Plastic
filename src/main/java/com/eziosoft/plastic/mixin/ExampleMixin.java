@@ -1,4 +1,4 @@
-package com.eziosoft.testmod.mixin;
+package com.eziosoft.plastic.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
