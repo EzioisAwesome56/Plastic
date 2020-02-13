@@ -38,6 +38,7 @@ public class plastic implements ModInitializer {
 
 	public static final Item plastic = new Item(new Item.Settings().group(plastic_tab));
 	public static final Block plastic_ore = new FuckBlock(FabricBlockSettings.of(Material.STONE).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 2).hardness(2).resistance(0.2F).build());
+	public static final Block plastic_box = new FuckBlock(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 	public static final Item plastic_dust = new Item(new Item.Settings().group(plastic_tab));
 	public static final Item plastic_mix = new Item(new Item.Settings().maxCount(1).group(plastic_tab));
 	public static final Item raw_plastic = new Item(new Item.Settings().group(plastic_tab));
@@ -54,7 +55,9 @@ public class plastic implements ModInitializer {
 
 		System.out.println("Welcome to Plastic Version 1.0");
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_ore"), plastic_ore);
-		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_ore"), new BlockItem(plastic_ore, new Item.Settings().group(ItemGroup.MISC)));
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_ore"), new BlockItem(plastic_ore, new Item.Settings().group(plastic_tab)));
+		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_box"), plastic_box);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_box"), new BlockItem(plastic_box, new Item.Settings().group(plastic_tab)));
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic"), plastic);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_dust"), plastic_dust);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_mix"), plastic_mix);

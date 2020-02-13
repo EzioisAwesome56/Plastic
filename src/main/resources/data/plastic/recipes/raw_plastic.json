@@ -7,20 +7,20 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:stone"
+            "item": "minecraft:cobblestone"
         },
         "i": {
-            "item": "minecraft:iron_ingot"
+            "item": "minecraft:wheat"
         },
         "S": {
-            "item": "minecraft:slime_ball"
+            "item": "minecraft:orange_dye"
         },
         "g": {
-            "item": "minecraft:gold_ingot"
+            "item": "minecraft:flint"
         }
     },
     "result": {
         "item": "plastic:raw_plastic",
-        "count": 1
+        "count": 3
     }
 }

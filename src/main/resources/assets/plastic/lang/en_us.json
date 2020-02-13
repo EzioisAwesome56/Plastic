@@ -8,5 +8,6 @@
   "item.plastic.duct_tape": "Duct Tape",
   "item.plastic.plastic_pick": "Plastic Pickaxe",
   "item.plastic.plastic_bowl": "Plastic Bowl",
-  "itemGroup.plastic.main": "Plastic"
+  "itemGroup.plastic.main": "Plastic",
+  "block.plastic.plastic_box": "Plastic Box"
 }
