@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "plastic:plastic"
+    },
+    "result": "plastic:plastic_bowl",
+    "count": 1
+}

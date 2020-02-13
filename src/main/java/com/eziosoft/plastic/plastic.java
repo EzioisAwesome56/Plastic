@@ -38,6 +38,7 @@ public class plastic implements ModInitializer {
 	public static final Item raw_plastic = new Item(new Item.Settings().group(ItemGroup.MISC));
 	public static final Item apple_plastic = new Item(new Item.Settings().group(ItemGroup.MISC).maxCount(1).food(new FoodComponent.Builder().hunger(9).saturationModifier(6f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 10), 0.2F).build()));
 	public static final Item duct_tape = new Item(new Item.Settings().group(ItemGroup.MISC));
+	public static final Item plastic_bowl = new Item(new Item.Settings().group(ItemGroup.MISC).maxCount(1));
 
 	@Override
 	public void onInitialize() {
@@ -56,6 +57,7 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("plastic", "raw_plastic"), raw_plastic);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_pick"), new PickaxeBase(new PlasticTool(), -2.2f));
 		Registry.register(Registry.ITEM, new Identifier("plastic", "duct_tape"), duct_tape);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_bowl"), plastic_bowl);
 
 	}
 
