@@ -1,3 +1,4 @@
 {
-  "block.testmod.plastic_ore": "Plastic Ore"
+  "block.testmod.plastic_ore": "Plastic Ore",
+  "item.testmod.plastic": "Plastic"
 }
