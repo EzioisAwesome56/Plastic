@@ -7,6 +7,6 @@ import net.minecraft.item.ToolMaterial;
 
 public class PickaxeBase extends PickaxeItem {
     protected PickaxeBase(ToolMaterial material, float dank) {
-        super(material, -1, dank, new Item.Settings().group(ItemGroup.MISC));
+        super(material, -1, dank, new Item.Settings().group(plastic.plastic_tab));
     }
 }
