@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.eziosoft.plastic.plastic"
+    ],
+    "client": [
+      "com.eziosoft.plastic.ClientInit"
     ]
   },
   "mixins": [

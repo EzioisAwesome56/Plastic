@@ -13,6 +13,13 @@ group = project.maven_group
 minecraft {
 }
 
+repositories {
+	maven {
+		name = "CottonMC"
+		url = "http://server.bbkr.space:8081/artifactory/libs-release"
+	}
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -24,6 +31,11 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
+
+	// lib gui
+	dependencies {
+		modImplementation "io.github.cottonmc:LibGui:1.5.1"
+	}
 }
 
 processResources {
@@ -74,6 +86,7 @@ publishing {
 
 	// select the repositories you want to publish to
 	repositories {
+
 		// uncomment to publish to the local maven
 		// mavenLocal()
 	}
