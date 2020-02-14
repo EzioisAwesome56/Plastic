@@ -15,13 +15,14 @@ public class PboxController extends CottonCraftingController {
 
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
-        root.setSize(200, 100);
+        root.setSize(150, 100);
 
-        for (int y = 0; y < 7; y++) {
-            for (int x = 0; x < 10; x++) {
-                if ((x + (y * 10)) >= blockInventory.getInvSize()) break;
+        int slotsPerRow = 9;
+        int rows = 2;
 
-                root.add(WItemSlot.of(blockInventory, x + (y * 10)), x, y);
+        for (int y = 0; y < blockInventory.getInvSize() % slotsPerRow; y++) {
+            for (int x = 0; x < Math.min(blockInventory.getInvSize() - (y * slotsPerRow), slotsPerRow); x++) {
+                root.add(WItemSlot.of(blockInventory, x + (y * slotsPerRow)), x, y);
             }
         }
 
@@ -35,9 +36,7 @@ public class PboxController extends CottonCraftingController {
         root.add(itemSlot, 0, 1);
         root.add(itemSlot2, 5, 1);*/
 
-        System.out.println(root.getX());
-
-        root.add(this.createPlayerInventoryPanel(), 5, 3);
+        root.add(this.createPlayerInventoryPanel(), 0, 3);
 
         root.validate(this);
     }
