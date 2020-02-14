@@ -17,9 +17,18 @@ public class PboxController extends CottonCraftingController {
         setRootPanel(root);
         root.setSize(200, 100);
 
-        for (int i = 0; i < blockInventory.getInvSize(); i++ ){
-            root.add(WItemSlot.of(blockInventory, i), i, 0);
+        for (int y = 0; y < 7; y++) {
+            for (int x = 0; x < 10; x++) {
+                if ((x + (y * 10)) >= blockInventory.getInvSize()) break;
+
+                root.add(WItemSlot.of(blockInventory, x + (y * 10)), x, y);
+            }
         }
+
+
+        /*for (int i = 0; i < blockInventory.getInvSize(); i++ ){
+            root.add(WItemSlot.of(blockInventory, i), i, 0);
+        }*/
 
         /*WItemSlot itemSlot = WItemSlot.of(blockInventory, 0);
         WItemSlot itemSlot2 = WItemSlot.of(blockInventory, 0);
