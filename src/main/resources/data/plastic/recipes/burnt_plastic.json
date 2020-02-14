@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+        "item": "plastic:plastic"
+    },
+    "result": "plastic:burnt_plastic",
+    "experience": 2,
+    "cookingtime": 100
+}

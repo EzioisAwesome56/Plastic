@@ -37,6 +37,9 @@ public class plastic implements ModInitializer {
 	public static final Item apple_plastic = new Item(new Item.Settings().group(plastic_tab).maxCount(1).food(new FoodComponent.Builder().hunger(9).saturationModifier(6f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 10), 0.2F).build()));
 	public static final Item duct_tape = new Item(new Item.Settings().group(plastic_tab));
 	public static final Item plastic_bowl = new Item(new Item.Settings().group(plastic_tab).maxCount(1));
+	public static final Item burnt_plastic = new Item(new Item.Settings().group(plastic_tab));
+	public static final Item burnt_bowl = new Item(new Item.Settings().group(plastic_tab).maxCount(1));
+	public static final Item strong_plastic = new Item(new Item.Settings().group(plastic_tab));
 
 	public static BlockEntityType<PlasticBox> plasticBox_ent;
 
@@ -59,6 +62,9 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("plastic", "duct_tape"), duct_tape);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_bowl"), plastic_bowl);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "dank"), dank);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "burnt_plastic"), burnt_plastic);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "burnt_bowl"), burnt_bowl);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "strong_plastic"), strong_plastic);
 
 		// shit for plastic box
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_box"), plastic_box);

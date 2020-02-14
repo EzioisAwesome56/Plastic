@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "plastic:burnt_plastic"
+        },
+        {
+            "item": "plastic:burnt_plastic"
+        },
+        {
+            "item": "plastic:burnt_plastic"
+        },
+        {
+            "item": "plastic:plastic_bowl"
+        }
+    ],
+    "result": {
+        "item": "plastic:burnt_bowl",
+        "count": 1
+    }
+}

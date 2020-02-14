@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "plastic:burnt_bowl"
+    },
+    "result": "plastic:strong_plastic",
+    "experience": 5.0,
+    "cookingtime": 500
+}
