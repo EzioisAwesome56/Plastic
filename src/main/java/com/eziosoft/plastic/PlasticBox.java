@@ -12,7 +12,7 @@ public class PlasticBox extends BlockEntity implements PboxInventory {
         super(plastic.plasticBox_ent);
     }
 
-    DefaultedList<ItemStack> items = DefaultedList.ofSize(1, ItemStack.EMPTY);
+    DefaultedList<ItemStack> items = DefaultedList.ofSize(12, ItemStack.EMPTY);
 
     @Override
     public DefaultedList<ItemStack> getItems() {

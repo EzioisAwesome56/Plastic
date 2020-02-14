@@ -15,14 +15,20 @@ public class PboxController extends CottonCraftingController {
 
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
-        root.setSize(300, 100);
+        root.setSize(200, 100);
 
-        WItemSlot itemSlot = WItemSlot.of(blockInventory, 0);
+        for (int i = 0; i < blockInventory.getInvSize(); i++ ){
+            root.add(WItemSlot.of(blockInventory, i), i, 0);
+        }
+
+        /*WItemSlot itemSlot = WItemSlot.of(blockInventory, 0);
         WItemSlot itemSlot2 = WItemSlot.of(blockInventory, 0);
-        root.add(itemSlot, 4, 1);
-        root.add(itemSlot2, 5, 1);
+        root.add(itemSlot, 0, 1);
+        root.add(itemSlot2, 5, 1);*/
 
-        root.add(this.createPlayerInventoryPanel(), 0, 3);
+        System.out.println(root.getX());
+
+        root.add(this.createPlayerInventoryPanel(), 5, 3);
 
         root.validate(this);
     }
