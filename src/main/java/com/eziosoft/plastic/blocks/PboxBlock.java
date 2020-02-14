@@ -1,4 +1,4 @@
-package com.eziosoft.plastic;
+package com.eziosoft.plastic.blocks;
 
 import com.eziosoft.plastic.blockent.PlasticBox;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;

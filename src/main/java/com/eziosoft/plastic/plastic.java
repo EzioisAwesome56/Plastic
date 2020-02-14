@@ -1,6 +1,9 @@
 package com.eziosoft.plastic;
 
 import com.eziosoft.plastic.blockent.PlasticBox;
+import com.eziosoft.plastic.blockent.PlasticBox2;
+import com.eziosoft.plastic.blocks.PboxBlock;
+import com.eziosoft.plastic.blocks.PboxBlock2;
 import com.eziosoft.plastic.screen.GuiController;
 import com.eziosoft.plastic.util.configUtil;
 import net.fabricmc.api.ModInitializer;
@@ -40,8 +43,10 @@ public class plastic implements ModInitializer {
 	public static final Item burnt_plastic = new Item(new Item.Settings().group(plastic_tab));
 	public static final Item burnt_bowl = new Item(new Item.Settings().group(plastic_tab).maxCount(1));
 	public static final Item strong_plastic = new Item(new Item.Settings().group(plastic_tab));
+	public static final Block plastic_boxtwo = new PboxBlock2(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 
 	public static BlockEntityType<PlasticBox> plasticBox_ent;
+	public static BlockEntityType<PlasticBox2> plasticBox_ent2;
 
 	@Override
 	public void onInitialize() {
@@ -66,11 +71,15 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("plastic", "burnt_bowl"), burnt_bowl);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "strong_plastic"), strong_plastic);
 
-		// shit for plastic box
+		// shit for blocks with inventories
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_box"), plastic_box);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_box"), new BlockItem(plastic_box, new Item.Settings().group(plastic_tab)));
 		plasticBox_ent = Registry.register(Registry.BLOCK_ENTITY_TYPE, "plastic:plastic_box_ent", BlockEntityType.Builder.create(PlasticBox::new, plastic_box).build(null));
-		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_box"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 0), player.inventory, BlockContext.create(player.world, buf.readBlockPos())));
+		plasticBox_ent2 = Registry.register(Registry.BLOCK_ENTITY_TYPE, "plastic:plastic_box_ent2", BlockEntityType.Builder.create(PlasticBox2::new, plastic_boxtwo).build(null));
+		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_box"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 1), player.inventory, BlockContext.create(player.world, buf.readBlockPos())));
+		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_boxtwo"), plastic_boxtwo);
+		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_box2"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 0), player.inventory, BlockContext.create(player.world, buf.readBlockPos())));
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_boxtwo"), new BlockItem(plastic_boxtwo, new Item.Settings().group(plastic_tab)));
 
 	}
 }

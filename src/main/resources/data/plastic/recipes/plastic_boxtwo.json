@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#g#",
+        "gDg",
+        "#g#"
+    ],
+    "key": {
+        "#": {
+            "item": "plastic:duct_tape"
+        },
+        "g": {
+            "item": "plastic:strong_plastic"
+        },
+        "D": {
+            "item": "plastic:plastic_box"
+        }
+    },
+    "result": {
+        "item": "plastic:plastic_boxtwo",
+        "count": 1
+    }
+}

@@ -36,7 +36,7 @@ public class GuiController extends CottonCraftingController {
         root.add(itemSlot, 0, 1);
         root.add(itemSlot2, 5, 1);*/
 
-        root.add(this.createPlayerInventoryPanel(), 0, 3);
+        root.add(this.createPlayerInventoryPanel(), 0, syncId[4]);
 
         root.validate(this);
     }
