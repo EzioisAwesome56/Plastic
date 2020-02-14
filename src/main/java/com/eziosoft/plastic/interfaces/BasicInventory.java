@@ -1,14 +1,13 @@
-package com.eziosoft.plastic;
+package com.eziosoft.plastic.interfaces;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DefaultedList;
 
 @FunctionalInterface
-public interface PboxInventory extends Inventory {
+public interface BasicInventory extends Inventory {
     /**
      * Gets the item list of this inventory.
      * Must return the same instance every time it's called.
@@ -18,13 +17,13 @@ public interface PboxInventory extends Inventory {
     /**
      * Creates an inventory from the item list.
      */
-    static PboxInventory of(DefaultedList<ItemStack> items) {
+    static BasicInventory of(DefaultedList<ItemStack> items) {
         return () -> items;
     }
     /**
      * Creates a new inventory with the size.
      */
-    static PboxInventory ofSize(int size) {
+    static BasicInventory ofSize(int size) {
         return of(DefaultedList.ofSize(size, ItemStack.EMPTY));
     }
     // Inventory

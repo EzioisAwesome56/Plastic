@@ -9,12 +9,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.DefaultedList;
 
-public class PlasticBox extends BlockEntity implements BasicInventory {
-    public PlasticBox() {
+public class PlasticBox2 extends BlockEntity implements BasicInventory {
+    public PlasticBox2() {
         super(plastic.plasticBox_ent);
     }
 
-    DefaultedList<ItemStack> items = DefaultedList.ofSize(12, ItemStack.EMPTY);
+    DefaultedList<ItemStack> items = DefaultedList.ofSize(30, ItemStack.EMPTY);
 
     @Override
     public DefaultedList<ItemStack> getItems() {

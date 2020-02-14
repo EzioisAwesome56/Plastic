@@ -9,15 +9,15 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.recipe.RecipeType;
 
-public class PboxController extends CottonCraftingController {
-    public PboxController(int syncId, PlayerInventory playerInventory, BlockContext context) {
-        super(RecipeType.SMELTING, syncId, playerInventory, getBlockInventory(context), getBlockPropertyDelegate(context));
+public class GuiController extends CottonCraftingController {
+    public GuiController(Integer[] syncId, PlayerInventory playerInventory, BlockContext context) {
+        super(RecipeType.SMELTING, syncId[0], playerInventory, getBlockInventory(context), getBlockPropertyDelegate(context));
 
         WGridPanel root = new WGridPanel();
         setRootPanel(root);
-        root.setSize(150, 100);
+        root.setSize(syncId[1], syncId[2]);
 
-        int slotsPerRow = 9;
+        int slotsPerRow = syncId[3];
         int rows = 2;
 
         for (int y = 0; y < blockInventory.getInvSize() % slotsPerRow; y++) {
