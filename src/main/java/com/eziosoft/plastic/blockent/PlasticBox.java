@@ -1,5 +1,7 @@
-package com.eziosoft.plastic;
+package com.eziosoft.plastic.blockent;
 
+import com.eziosoft.plastic.PboxInventory;
+import com.eziosoft.plastic.plastic;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

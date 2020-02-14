@@ -1,5 +1,6 @@
 package com.eziosoft.plastic;
 
+import com.eziosoft.plastic.blockent.PlasticBox;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
