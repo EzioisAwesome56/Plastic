@@ -76,9 +76,9 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_box"), new BlockItem(plastic_box, new Item.Settings().group(plastic_tab)));
 		plasticBox_ent = Registry.register(Registry.BLOCK_ENTITY_TYPE, "plastic:plastic_box_ent", BlockEntityType.Builder.create(PlasticBox::new, plastic_box).build(null));
 		plasticBox_ent2 = Registry.register(Registry.BLOCK_ENTITY_TYPE, "plastic:plastic_box_ent2", BlockEntityType.Builder.create(PlasticBox2::new, plastic_boxtwo).build(null));
-		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_box"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 1), player.inventory, BlockContext.create(player.world, buf.readBlockPos())));
+		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_box"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 1), player.inventory, BlockContext.create(player.world, buf.readBlockPos()), "block.plastic.plastic_box"));
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_boxtwo"), plastic_boxtwo);
-		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_box2"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 0), player.inventory, BlockContext.create(player.world, buf.readBlockPos())));
+		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_boxtwo"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 2), player.inventory, BlockContext.create(player.world, buf.readBlockPos()), "block.plastic.plastic_boxtwo"));
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_boxtwo"), new BlockItem(plastic_boxtwo, new Item.Settings().group(plastic_tab)));
 
 	}
