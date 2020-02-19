@@ -16,8 +16,6 @@ import net.minecraft.util.crash.CrashException;
 import net.minecraft.util.crash.CrashReport;
 import net.minecraft.util.crash.CrashReportSection;
 
-import java.util.concurrent.BlockingQueue;
-
 public class PlasticCombinerHandler implements Runnable {
 
     private Inventory blockinv;
@@ -34,6 +32,8 @@ public class PlasticCombinerHandler implements Runnable {
 
     @Override
     public void run() {
+        MinecraftClient.printCrashReport(new CrashReport("How the fuck did you call this function??", new Exception("Dont do this again!")));
+        /*
         // clear the label right at the start
         root.remove(label);
         // check if something is in the output slot
@@ -60,7 +60,6 @@ public class PlasticCombinerHandler implements Runnable {
             root.add(label, 0, 2);
 
             return;
-        }
-        System.out.println("Do more stuff here");
+        }*/
     }
 }
