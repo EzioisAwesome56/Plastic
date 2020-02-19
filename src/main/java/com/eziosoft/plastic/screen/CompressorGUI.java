@@ -31,7 +31,51 @@ public class CompressorGUI extends CottonCraftingController {
         root.setSize(100, 100);
         WLabel label = new WLabel(new TranslatableText("block.plastic.plastic_compressor").asString());
         blockInventory = getBlockInventory(context);
-        WButton craft = new WButton(new TranslatableText("gui.plastic.compress")).setOnClick(new PlasticCombinerHandler(blockInventory, root, status, playerInventory));
+
+        // test
+        if (blockInventory.countInInv(Items.STICK) == 2 && blockInventory.getInvStack(3).isEmpty()) {
+            // clear all the slots
+            blockInventory.clear();
+            // give player something
+            blockInventory.setInvStack(3, new ItemStack(Items.ACACIA_DOOR, 7));
+        }
+
+
+
+
+
+        WButton craft = new WButton(new TranslatableText("gui.plastic.compress")).setOnClick(new Runnable() {
+            @Override
+            public void run() {
+                // clear the label right at the start
+                root.remove(status);
+                // check if something is in the output slot
+                if (!blockInventory.getInvStack(3).isEmpty()){
+                    status = new WLabel(new TranslatableText("gui.plastic.full").asString());
+                    root.add(status, 0, 2);
+                    return;
+                }
+                // check if all the input slots are empty
+                if (blockInventory.getInvStack(0).isEmpty() && blockInventory.getInvStack(1).isEmpty() && blockInventory.getInvStack(2).isEmpty()){
+                    status = new WLabel(new TranslatableText("gui.plastic.empty").asString());
+                    root.add(status, 0, 2);
+                    return;
+                }
+                // from this point forwards, check all crafting recipes
+                if (blockInventory.countInInv(Items.STICK) == 2){
+                    // clear all the slots
+                    blockInventory.clear();
+                    // give player something
+                    blockInventory.setInvStack(3, new ItemStack(Items.ACACIA_DOOR, 7));
+                    // update status
+                    status = new WLabel(new TranslatableText("gui.plastic.compressed").asString());
+                    root.add(status, 0, 2);
+
+                    return;
+                }
+                System.out.println("Do more stuff here");
+            }
+        });
         root.add(label, 0, 0);
 
         for (int x = 0; x < blockInventory.getInvSize() - 1; x++){
