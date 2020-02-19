@@ -85,6 +85,7 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_boxtwo"), plastic_boxtwo);
 		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_boxtwo"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 2), player.inventory, BlockContext.create(player.world, buf.readBlockPos()), "block.plastic.plastic_boxtwo"));
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_boxtwo"), new BlockItem(plastic_boxtwo, new Item.Settings().group(plastic_tab)));
+
 		// Plastic Combiner stuff starts here
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_compressor"), plastic_compressor);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_compressor"), new BlockItem(plastic_compressor, new Item.Settings().group(plastic_tab)));
