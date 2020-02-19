@@ -2,8 +2,11 @@ package com.eziosoft.plastic;
 
 import com.eziosoft.plastic.blockent.PlasticBox;
 import com.eziosoft.plastic.blockent.PlasticBox2;
+import com.eziosoft.plastic.blockent.PlasticCompressor;
+import com.eziosoft.plastic.blocks.PCompressBlock;
 import com.eziosoft.plastic.blocks.PboxBlock;
 import com.eziosoft.plastic.blocks.PboxBlock2;
+import com.eziosoft.plastic.screen.CompressorGUI;
 import com.eziosoft.plastic.screen.GuiController;
 import com.eziosoft.plastic.util.configUtil;
 import net.fabricmc.api.ModInitializer;
@@ -44,9 +47,11 @@ public class plastic implements ModInitializer {
 	public static final Item burnt_bowl = new Item(new Item.Settings().group(plastic_tab).maxCount(1));
 	public static final Item strong_plastic = new Item(new Item.Settings().group(plastic_tab));
 	public static final Block plastic_boxtwo = new PboxBlock2(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
+	public static final Block plastic_compressor = new PCompressBlock(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 
 	public static BlockEntityType<PlasticBox> plasticBox_ent;
 	public static BlockEntityType<PlasticBox2> plasticBox_ent2;
+	public static BlockEntityType<PlasticCompressor> plasticCombine_ent;
 
 	@Override
 	public void onInitialize() {
@@ -80,6 +85,11 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_boxtwo"), plastic_boxtwo);
 		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_boxtwo"), (syncId, id, player, buf) -> new GuiController(configUtil.getControllerConfig(syncId, 2), player.inventory, BlockContext.create(player.world, buf.readBlockPos()), "block.plastic.plastic_boxtwo"));
 		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_boxtwo"), new BlockItem(plastic_boxtwo, new Item.Settings().group(plastic_tab)));
+		// Plastic Combiner stuff starts here
+		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_compressor"), plastic_compressor);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_compressor"), new BlockItem(plastic_compressor, new Item.Settings().group(plastic_tab)));
+		plasticCombine_ent = Registry.register(Registry.BLOCK_ENTITY_TYPE, "plastic:plastic_combine_ent", BlockEntityType.Builder.create(PlasticCompressor::new, plastic_compressor).build(null));
+		ContainerProviderRegistry.INSTANCE.registerFactory(new Identifier("plastic", "plastic_compressor"), (syncId, id, player, buf) -> new CompressorGUI(syncId, player.inventory, BlockContext.create(player.world, buf.readBlockPos())));
 
 	}
 }

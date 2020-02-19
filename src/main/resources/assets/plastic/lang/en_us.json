@@ -14,5 +14,9 @@
   "item.plastic.burnt_plastic": "Burnt Plastic",
   "item.plastic.burnt_bowl": "Bowl of Burnt Plastic",
   "item.plastic.strong_plastic": "Strong Plastic",
-  "block.plastic.plastic_boxtwo": "Better Plastic Box"
+  "block.plastic.plastic_boxtwo": "Better Plastic Box",
+  "block.plastic.plastic_compressor": "Plastic Compressor",
+  "gui.plastic.wait": "Waiting...",
+  "gui.plastic.compress": "Compress",
+  "gui.plastic.full": "Output slot contains items!"
 }

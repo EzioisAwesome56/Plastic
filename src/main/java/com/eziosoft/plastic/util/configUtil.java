@@ -4,11 +4,11 @@ public class configUtil {
 
     public static Integer[] getControllerConfig(int sync, int selection){
         if (selection == 0){
-            return new Integer[]{sync, 0, 0, 0, 0};
+            return new Integer[]{sync, 0, 0, 0};
         } else if (selection == 1){
-            return new Integer[]{sync, 150, 100, 9, 3};
+            return new Integer[]{sync, 150, 100, 9};
         } else if (selection == 2){
-            return new Integer[]{sync, 150, 150, 9, 5};
+            return new Integer[]{sync, 150, 150, 9};
         }
         return new Integer[]{2};
     }
