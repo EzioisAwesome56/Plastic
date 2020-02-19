@@ -18,5 +18,7 @@
   "block.plastic.plastic_compressor": "Plastic Compressor",
   "gui.plastic.wait": "Waiting...",
   "gui.plastic.compress": "Compress",
-  "gui.plastic.full": "Output slot contains items!"
+  "gui.plastic.full": "Output slot contains items!",
+  "gui.plastic.empty": "Input slots empty!",
+  "gui.plastic.compressed": "Compression succeeded!"
 }

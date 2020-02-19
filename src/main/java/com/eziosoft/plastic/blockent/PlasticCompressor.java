@@ -37,4 +37,6 @@ public class PlasticCompressor extends BlockEntity implements BasicInventory {
         Inventories.toTag(tag,items);
         return super.toTag(tag);
     }
+
+
 }
