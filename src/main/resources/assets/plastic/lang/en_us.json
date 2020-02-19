@@ -20,5 +20,7 @@
   "gui.plastic.compress": "Compress",
   "gui.plastic.full": "Output slot contains items!",
   "gui.plastic.empty": "Input slots empty!",
-  "gui.plastic.compressed": "Compression succeeded!"
+  "gui.plastic.compressed": "Compression succeeded!",
+  "item.plastic.raw_mix": "Raw Plastic Mix",
+  "tip.plastic.rawmix": "Try putting me in a plastic compressor!"
 }

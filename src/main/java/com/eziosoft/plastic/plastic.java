@@ -6,6 +6,7 @@ import com.eziosoft.plastic.blockent.PlasticCompressor;
 import com.eziosoft.plastic.blocks.PCompressBlock;
 import com.eziosoft.plastic.blocks.PboxBlock;
 import com.eziosoft.plastic.blocks.PboxBlock2;
+import com.eziosoft.plastic.items.itemWithTooltip;
 import com.eziosoft.plastic.screen.CompressorGUI;
 import com.eziosoft.plastic.screen.GuiController;
 import com.eziosoft.plastic.util.configUtil;
@@ -48,6 +49,7 @@ public class plastic implements ModInitializer {
 	public static final Item strong_plastic = new Item(new Item.Settings().group(plastic_tab));
 	public static final Block plastic_boxtwo = new PboxBlock2(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 	public static final Block plastic_compressor = new PCompressBlock(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
+	public static final Item raw_mix = new itemWithTooltip(new Item.Settings().group(plastic_tab), "tip.plastic.rawmix");
 
 	public static BlockEntityType<PlasticBox> plasticBox_ent;
 	public static BlockEntityType<PlasticBox2> plasticBox_ent2;
@@ -75,6 +77,7 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("plastic", "burnt_plastic"), burnt_plastic);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "burnt_bowl"), burnt_bowl);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "strong_plastic"), strong_plastic);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "raw_mix"), raw_mix);
 
 		// shit for blocks with inventories
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_box"), plastic_box);

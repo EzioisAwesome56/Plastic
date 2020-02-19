@@ -1,5 +1,6 @@
 package com.eziosoft.plastic.screen;
 
+import com.eziosoft.plastic.plastic;
 import com.eziosoft.plastic.stuff.PlasticCombinerHandler;
 import com.sun.javafx.image.IntPixelGetter;
 import io.github.cottonmc.cotton.gui.CottonCraftingController;
@@ -36,11 +37,11 @@ public class CompressorGUI extends CottonCraftingController {
 
         // handle crafting
         if (blockInventory.getInvStack(3).isEmpty()) {
-            if (blockInventory.countInInv(Items.STICK) == 2) {
+            if (blockInventory.countInInv(plastic.raw_mix) == 1) {
                 // clear all the slots
                 blockInventory.clear();
                 // give player something
-                blockInventory.setInvStack(3, new ItemStack(Items.ACACIA_DOOR, 7));
+                blockInventory.setInvStack(3, new ItemStack(plastic.raw_plastic, 1));
                 status = new WLabel(new TranslatableText("gui.plastic.compressed").asString());
             }
         } else {
