@@ -41,6 +41,7 @@ public class CompressorGUI extends CottonCraftingController {
 
         root.add(status, 0, 2);
         root.add(craft, 0, 3, 4, 1);
+        playerInventory.updateItems();
 
 
         root.add(this.createPlayerInventoryPanel(), 0, 5);
