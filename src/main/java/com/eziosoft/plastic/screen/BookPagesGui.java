@@ -20,7 +20,7 @@ public class BookPagesGui extends LightweightGuiDescription {
         root.setSize(100, 100);
         WLabel title = new WLabel(new TranslatableText("gui.plastic.book").asString());
         root.add(title, 0, 0);
-        root.add(new WSprite(new Identifier("plastic:textures/item/burnt_bowl.png")), 0, 1);
+        root.add(new WSprite(new Identifier("plastic:textures/gui/test.png")), 0, 1, 10, 10);
 
 
         root.validate(this);
