@@ -6,6 +6,7 @@ import com.eziosoft.plastic.blockent.PlasticCompressor;
 import com.eziosoft.plastic.blocks.PCompressBlock;
 import com.eziosoft.plastic.blocks.PboxBlock;
 import com.eziosoft.plastic.blocks.PboxBlock2;
+import com.eziosoft.plastic.items.RecipeBook;
 import com.eziosoft.plastic.items.itemWithTooltip;
 import com.eziosoft.plastic.screen.CompressorGUI;
 import com.eziosoft.plastic.screen.GuiController;
@@ -51,7 +52,7 @@ public class plastic implements ModInitializer {
 	public static final Block plastic_boxtwo = new PboxBlock2(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 	public static final Block plastic_compressor = new PCompressBlock(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 	public static final Item raw_mix = new itemWithTooltip(new Item.Settings().group(plastic_tab), "tip.plastic.rawmix");
-	public static final Item plastic_book = new Item(new Item.Settings().group(plastic_tab));
+	public static final Item plastic_book = new RecipeBook(new Item.Settings().group(plastic_tab));
 ;
 	public static BlockEntityType<PlasticBox> plasticBox_ent;
 	public static BlockEntityType<PlasticBox2> plasticBox_ent2;
