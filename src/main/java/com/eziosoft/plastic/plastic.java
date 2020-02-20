@@ -24,6 +24,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.lwjgl.system.CallbackI;
 
 public class plastic implements ModInitializer {
 
@@ -50,7 +51,8 @@ public class plastic implements ModInitializer {
 	public static final Block plastic_boxtwo = new PboxBlock2(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 	public static final Block plastic_compressor = new PCompressBlock(FabricBlockSettings.of(Material.STONE).breakByHand(true).hardness(2).resistance(0.2F).build());
 	public static final Item raw_mix = new itemWithTooltip(new Item.Settings().group(plastic_tab), "tip.plastic.rawmix");
-
+	public static final Item plastic_book = new Item(new Item.Settings().group(plastic_tab));
+;
 	public static BlockEntityType<PlasticBox> plasticBox_ent;
 	public static BlockEntityType<PlasticBox2> plasticBox_ent2;
 	public static BlockEntityType<PlasticCompressor> plasticCombine_ent;
@@ -78,6 +80,7 @@ public class plastic implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("plastic", "burnt_bowl"), burnt_bowl);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "strong_plastic"), strong_plastic);
 		Registry.register(Registry.ITEM, new Identifier("plastic", "raw_mix"), raw_mix);
+		Registry.register(Registry.ITEM, new Identifier("plastic", "plastic_book"), plastic_book);
 
 		// shit for blocks with inventories
 		Registry.register(Registry.BLOCK, new Identifier("plastic", "plastic_box"), plastic_box);

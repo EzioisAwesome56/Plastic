@@ -22,5 +22,6 @@
   "gui.plastic.empty": "Input slots empty!",
   "gui.plastic.compressed": "Compression succeeded!",
   "item.plastic.raw_mix": "Raw Plastic Mix",
-  "tip.plastic.rawmix": "Try putting me in a plastic compressor!"
+  "tip.plastic.rawmix": "Try putting me in a plastic compressor!",
+  "item.plastic.plastic_book": "The all-in-one Plastic guide"
 }
