@@ -2,7 +2,6 @@ package com.eziosoft.plastic.screen;
 
 import com.eziosoft.plastic.plastic;
 import com.eziosoft.plastic.stuff.PlasticCombinerHandler;
-import com.sun.javafx.image.IntPixelGetter;
 import io.github.cottonmc.cotton.gui.CottonCraftingController;
 import io.github.cottonmc.cotton.gui.widget.*;
 import net.minecraft.client.MinecraftClient;
@@ -16,7 +15,6 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.crash.CrashReport;
-import sun.jvm.hotspot.utilities.soql.Callable;
 
 import java.lang.reflect.WildcardType;
 import java.util.concurrent.BlockingQueue;
